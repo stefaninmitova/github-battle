@@ -1,9 +1,10 @@
 var React = require('react')
 var PropTypes = React.PropTypes
+var MainContainer = require('./MainContainer')
 
 function Prompt (props) {
   return (
-    <div className='prompt-container'>
+    <MainContainer>
       <h1>{props.header}</h1>
       <div className='prompt-form-container'>
         <form onSubmit={props.onSubmitUser}>
@@ -17,14 +18,14 @@ function Prompt (props) {
           </div>
           <div className='prompt-button-container'>
             <button
-              className='prompt-button'
+              className='btn btn-large btn-success'
               type='submit' >
               Submit
             </button>
           </div>
         </form>
       </div>
-    </div>
+    </MainContainer>
   )
 }
 
